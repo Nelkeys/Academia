@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="css/searchResult.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo" onclick="window.location.href ='/'">
+            <img src="assets/nacos-logo.png" alt="">
+            <h1>Academia</h1>
+        </div>
+
+        <form id="search-form" action="/search.html">
+            <input type="text" name="query" id="search-input" class="search-input" placeholder="Enter prompt...">
+            <button type="submit"><i class='bx bx-search'></i></button>
+        </form>
+    </header>
+
+    <div id="results-container">
+        <h1>Loading...</h1>
+    </div>
+    <script src="index.js"></script>
+    <script type="module" src="/javascripts/search/index.js"></script>
+</body>
+</html>

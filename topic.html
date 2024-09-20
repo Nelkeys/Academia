@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Topic Details</title>
+    <link rel="stylesheet" href="css/topic.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo" onclick="window.location.href ='/'">
+            <img src="assets/nacos-logo.png" alt="">
+            <h1>Academia</h1>
+        </div>
+
+        <form id="search-form" action="">
+            <input type="text" name="prompt" id="search-input" class="search-input" placeholder="Enter prompt...">
+            <button type="submit"><i class='bx bx-search'></i></button>
+        </form>
+    </header>
+
+    <section class="article">
+        <div id="topic-container">
+            <div class="title-date">
+                <h2 id="topic-title"></h2>
+                <p id="topic-date"></p>
+            </div>
+            
+            <div id="topic-note"></div>
+        </div>
+    </section>
+
+    <div class="author-section">
+        <img src="" alt="author_pic" id="author_pic">
+        <p id="topic-author"></p>
+    </div>
+    
+    <script src="index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const topicDetails = JSON.parse(localStorage.getItem('topicDetails')) || {};
+
+            document.getElementById('topic-title').textContent = topicDetails.title || 'No title available';
+            document.getElementById('topic-date').textContent = topicDetails.date || 'No date available';
+            document.getElementById('topic-note').innerHTML = topicDetails.note || 'No note available';
+            document.getElementById('topic-author').textContent = topicDetails.author || 'No author available';
+        });
+    </script>
+</body>
+</html>

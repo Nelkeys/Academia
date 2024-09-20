@@ -1,0 +1,103 @@
+@import url(/css/general/style.css) all;
+
+body{
+    font-size: 15px;
+}
+header{
+    display: flex;
+    gap: 2em;
+}
+
+.article{
+    margin: 5em 25em 4em 15em;
+}
+
+
+#topic-title{
+    border-bottom: 1px solid #111;
+}
+.title-date{
+    display: flex;
+    flex-direction: column;
+    
+}
+#topic-date{
+    margin: .5em 0;
+    border-bottom: 1.5px solid #9d9d9d6b;
+}
+
+#topic-note{
+    margin-top: 2em;
+}
+
+p{
+    margin-top: .5em;
+}
+h3{
+    margin-top: 1em;
+    font-weight: 600;
+}
+
+.author-section{
+    margin-top: 4em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+}
+.author-section img{
+    border: 1px solid #3f3f3f65;
+    background: #3f3f3f65;
+    height: 10em;
+    width: 10em;
+    border-radius: 5px;
+    margin-top: 10em;
+}
+
+
+form{
+    display: flex;
+    align-items: center;
+    background: #dcdcdc25;
+    border-radius: 5px;
+    border: 1px solid #3f3f3f65;
+    height: 2.5em;
+    width: 40%;
+}
+form input{
+    width: 90%;
+    height: 10%;
+    padding: .5em;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'poppins', sans-serif;
+}
+form input:focus{
+    outline: none;
+}
+form button{
+    width: 10%;
+    height: 100%;
+    cursor: pointer;
+    background: transparent;
+    transition: .5s ease;
+    border: 1px solid #179411;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: #179411;
+}
+.bx-search{
+    padding: .5em;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 120%;
+    font-weight: 700;
+    color: #fefefe;
+}
