@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="assets/p-logo.png" type="image/x-icon">
     <title>Topic Details</title>
     <link rel="stylesheet" href="css/topic.css">
 </head>
@@ -12,12 +13,11 @@
 <body>
     <header>
         <div class="logo" onclick="window.location.href ='/'">
-            <img src="assets/nacos-logo.png" alt="">
-            <h1>Academia</h1>
+            <img src="assets/ls-logo.png" alt="">
         </div>
 
-        <form id="search-form" action="">
-            <input type="text" name="prompt" id="search-input" class="search-input" placeholder="Enter prompt...">
+        <form id="search-form" action="search.html" method="GET">
+            <input type="text" name="query" id="search-input" class="search-input" placeholder="Enter prompt...">
             <button type="submit"><i class='bx bx-search'></i></button>
         </form>
     </header>
@@ -37,16 +37,19 @@
         <img src="" alt="author_pic" id="author_pic">
         <p id="topic-author"></p>
     </div>
-    
-    <script src="index.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const topicDetails = JSON.parse(localStorage.getItem('topicDetails')) || {};
 
-            document.getElementById('topic-title').textContent = topicDetails.title || 'No title available';
-            document.getElementById('topic-date').textContent = topicDetails.date || 'No date available';
-            document.getElementById('topic-note').innerHTML = topicDetails.note || 'No note available';
-            document.getElementById('topic-author').textContent = topicDetails.author || 'No author available';
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const title = urlParams.get('title');
+            const date = urlParams.get('date');
+            const note = urlParams.get('note');
+            const author = urlParams.get('author');
+
+            document.getElementById('topic-title').textContent = title;
+            document.getElementById('topic-date').textContent = date;
+            document.getElementById('topic-note').innerHTML = note;
+            document.getElementById('topic-author').textContent = `Author: ${author}`;
         });
     </script>
 </body>

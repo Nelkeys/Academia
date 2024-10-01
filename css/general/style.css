@@ -13,7 +13,7 @@ body{
     background: #efefef;
     font-family: 'poppins', sans-serif;
     background: url('/assets/wallpaperflare.com_wallpaper.jpg') top/cover no-repeat;
-    background: #ffffff;
+    background: #f9feff;
 }
 ::selection {
     background: rgba(94, 94, 94, 0.363);
@@ -32,5 +32,5 @@ header{
     cursor: pointer;
 }
 .logo img{
-    width: 3em;
+    width: 20em;
 }

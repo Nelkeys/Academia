@@ -32,7 +32,9 @@ form input{
     font-family: 'poppins', sans-serif;
 }
 form input:focus{
-    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: 2px solid #179411;
 }
 form button{
     width: 10%;

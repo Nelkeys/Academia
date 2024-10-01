@@ -5,6 +5,7 @@ body{
 }
 header{
     display: flex;
+    align-items: center;
     gap: 2em;
 }
 
@@ -71,7 +72,7 @@ form{
 }
 form input{
     width: 90%;
-    height: 10%;
+    height: 100%;
     padding: .5em;
     border: none;
     outline: none;
@@ -79,7 +80,9 @@ form input{
     font-family: 'poppins', sans-serif;
 }
 form input:focus{
-    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: 1px solid #179411;
 }
 form button{
     width: 10%;

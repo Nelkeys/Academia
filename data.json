@@ -1,0 +1,12 @@
+[
+    {
+        "title": "First Article",
+        "snippet": "This is the first article snippet.",
+        "author": "Author One"
+    },
+    {
+        "title": "Second Article",
+        "snippet": "This is the second article snippet.",
+        "author": "Author Two"
+    }
+]
