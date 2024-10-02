@@ -62,13 +62,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         const titleElement = document.createElement('a');
                         titleElement.href = `topic.html?title=${encodeURIComponent(article.topic)}&date=${encodeURIComponent(article.date)}&note=${encodeURIComponent(article.full_note)}&author=${encodeURIComponent(article.author)}`;
-                        titleElement.innerHTML = `<h2>${article.topic}</h2>`;
+                        titleElement.innerHTML = `<h2 id="title">${article.topic}</h2>`;
 
                         const snippetElement = document.createElement('p');
+                        snippetElement.classList.add('article-snippet'); // Added class "article-snippet"
                         snippetElement.textContent = article.snippet;
 
                         const authorElement = document.createElement('p');
-                        authorElement.textContent = `Author: ${article.author}`;
+                        authorElement.classList.add('article-author'); // Added class "article-author"
+                        authorElement.textContent = article.author;
 
                         articleDiv.appendChild(titleElement);
                         articleDiv.appendChild(snippetElement);

@@ -13,7 +13,6 @@ a:hover{
 header{
     display: flex;
     align-items: center;
-    gap: 2em;
     border-bottom: 1px solid #3f3f3f65;
 }
 
@@ -38,7 +37,7 @@ form input{
 form input:focus{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    outline: 1px solid #179411;
+    outline: 2px solid #179411;
 }
 form button{
     width: 10%;
@@ -74,39 +73,69 @@ form button{
 
 
 
-.result{
-    margin-top: 2em;
-    width: 60%;
-}
+
 #results-container{
-    margin: 5em 25em 0 15em;
+    margin: 5em 0 5em 20em;
+    font-size: 90%;
+    width: 50em;
 }
-.title{
+.article{
+    margin-top: 2em;
+}
+#title{
     color: #0500a2;
-    font-size: 115%;
-    font-weight: 400;
+    font-size: 125%;
+    font-weight: 500;
     cursor: pointer;
+    display: inline-block;
 }
 
-.description{
-    color: #1b1b1bcc;
-    font-size: 85%;
-    margin-top: .3em;
-}
 .date{
     color: #3e3e3ecc;
     font-size: 95%;
 }
-.description .text{
+.article-snippet{
     color: #121212cc;
+    margin-top: .2em;
 }
-.author{
+.article-author{
     border: 1px solid #3f3f3f65;
     padding: 6px;
     border-radius: 16px;
     display: inline-block;
-    font-size: 60%;
+    font-size: 65%;
     color:#0500a2;
     margin-top: 1em;
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 550px ) {
+    header{
+        flex-direction: column;
+        gap: 1em;
+        justify-content: space-between;
+        padding: 2em 1em !important;
+    }
+    form{
+        width: 90%;
+        margin: 0;
+    }
+    #results-container{
+        margin: 0;
+        padding: 2em;
+        font-size: 90%;
+        width: 100% !important;
+    }
+
+
+
+
 }

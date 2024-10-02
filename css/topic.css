@@ -7,6 +7,7 @@ header{
     display: flex;
     align-items: center;
     gap: 2em;
+    border-bottom: 1px solid #3f3f3f65;
 }
 
 .article{
@@ -15,27 +16,29 @@ header{
 
 
 #topic-title{
-    border-bottom: 1px solid #111;
+    color: #0500a2;
+    width: 70%;
+    text-align: center;
 }
 .title-date{
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
 }
 #topic-date{
-    margin: .5em 0;
-    border-bottom: 1.5px solid #9d9d9d6b;
+    font-size: 80%;
+    font-style: italic;
 }
 
 #topic-note{
     margin-top: 2em;
+    text-align: justify;
 }
-
-p{
-    margin-top: .5em;
+#topic-note p{
+    margin-top: 1em;
 }
 h3{
-    margin-top: 1em;
+    margin: 2em 0 .5em 0;
     font-weight: 600;
 }
 
@@ -56,9 +59,18 @@ h3{
     background: #3f3f3f65;
     height: 10em;
     width: 10em;
-    border-radius: 5px;
+    border-radius: 50%;
     margin-top: 10em;
 }
+#topic-author{
+    font-size: 90%;
+    margin-top: 1em;
+}
+
+
+
+
+
 
 
 form{
@@ -82,7 +94,7 @@ form input{
 form input:focus{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    outline: 1px solid #179411;
+    outline: 2px solid #179411;
 }
 form button{
     width: 10%;
@@ -103,4 +115,41 @@ form button{
     font-size: 120%;
     font-weight: 700;
     color: #fefefe;
+}
+
+
+
+
+
+@media (max-width: 550px ) {
+    header{
+        flex-direction: column;
+        gap: 1em;
+        justify-content: space-between;
+        padding: 2em 1em !important;
+    }
+    form{
+        width: 90%;
+        margin: 0;
+    }
+    #topic-title{
+        width: 100%;
+    }
+    .article{
+        margin: 0;
+        padding: 2em;
+        font-size: 90%;
+        width: 100% !important;
+    }
+    .author-section{
+        position: static;
+        right: auto;
+        top: auto;
+        width: auto;
+        height: auto;
+        padding: 2em 0 !important;
+    }
+    .author-section img{
+        margin-top: 0 !important;
+    }
 }

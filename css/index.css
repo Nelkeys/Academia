@@ -1,13 +1,13 @@
 @import url(/css/general/style.css) all;
 
 .intro{
-    margin: 5em 21em;
+    margin: 4em 21em;
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
 .intro h1{
-    font-weight: 400;
+    font-weight: 500;
     font-size: 200%;
 }
 .intro p{
@@ -67,3 +67,27 @@ form button:hover{
 
 
 
+
+
+
+@media (max-width: 550px ) {
+    header{
+        padding: .8em 0em;
+    }   
+    .intro{
+        margin: 5em 0 0 0;
+        padding: 2em;
+        gap: .5em;
+
+    }
+    .intro h1{
+        font-size: 150%;
+    }
+
+    form{
+        margin: 0 2em;
+    }
+    form button{
+        width: 15%;
+    }
+}
