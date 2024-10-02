@@ -84,7 +84,7 @@ form button{
 }
 
 .loading-logo img {
-    width: 15em;
+    width: 13em;
     animation: pulse 1.5s infinite; /* Ensure the image also pulses */
 }
 
@@ -152,7 +152,7 @@ header, .intro, form, .freq {
         text-align: center;
     }
     .intro h1{
-        font-size: 140%;
+        font-size: 120%;
     }
     .intro p{
         font-size: 80%;
