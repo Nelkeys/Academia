@@ -11,21 +11,42 @@
 <body>
     <header>
         <div class="logo" onclick="window.location.href ='/'">
-            <img src="assets/ls-logo.png" alt="">
-        </div>
-    </header>
+            <img src="assets/ls-logo.png" alt="" class="logo">
+        </header>
 
     <div class="intro">
         <h1>In-Depth Topics and Short Reads to Enhance Your Learning</h1>
-        <p>Search by topic or author</p>
+        <p>Search by topic/author</p>
     </div>
 
 
-    <form id="search-form" action="/search.html">
-        <input type="text" name="query" id="search-input" class="search-input" placeholder="Enter prompt..." required>
+    <form id="search-form" action="pages/search.html">
+        <input type="text" name="query" id="search-input" class="search-input" placeholder="Embedded system" required>
         <button type="submit"><i class='bx bx-search'></i></button>
     </form>
+
+    <div class="freq">
+        <p class="top">Frequent searches</p>
+
+        <div class="items">
+            <a href="">machine learning</a>
+            <a href="">programming</a>
+            <a href="">embedded systems</a>
+            <a href="">AI</a>
+            <a href="">processor</a>
+            <a href="">syntax</a>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="loading-logo">
+        <img src="assets/p-logo.png" alt="">
+    </div>
     
+    <script src="js/loader.js"></script>
     <script src="js/search.js"></script>
 </body>
 </html>
