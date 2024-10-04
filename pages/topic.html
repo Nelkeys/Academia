@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="../assets/p-logo.png" type="image/x-icon">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Topic Details</title>
     <link rel="stylesheet" href="../css/topic.css">
 </head>
@@ -17,7 +19,7 @@
         </div>
 
         <form id="search-form" action="/pages/search.html" method="GET">
-            <input type="text" name="query" id="search-input" class="search-input" placeholder="Embedded system">
+            <input type="text" name="query" id="search-input" class="search-input" placeholder="search..">
             <button type="submit"><i class='bx bx-search'></i></button>
         </form>
     </header>
@@ -25,11 +27,11 @@
     <section class="article">
         <div id="topic-container">
             <div class="title-date">
-                <h2 id="topic-title"></h2>
-                <p id="topic-date"></p>
+                <h2 id="topic-title" data-aos="fade-down" data-aos-duration="1500"></h2>
+                <p id="topic-date" data-aos="fade-left" data-aos-duration="2000"></p>
             </div>
             
-            <div id="topic-note"></div>
+            <div id="topic-note" data-aos="fade-right" data-aos-duration="2000"></div>
         </div>
     </section>
 
@@ -38,7 +40,12 @@
         <p id="topic-author"></p>
     </div>
 
+    
     <script>
+         AOS.init({
+            once: true
+        }); 
+
         document.addEventListener('DOMContentLoaded', function () {
             const urlParams = new URLSearchParams(window.location.search);
             const title = urlParams.get('title');
@@ -52,6 +59,8 @@
 
             document.getElementById('topic-author').textContent = author;
         });
+
+       
     </script>
 </body>
 </html>

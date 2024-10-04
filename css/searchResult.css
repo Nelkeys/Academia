@@ -21,7 +21,7 @@ header{
 form{
     display: flex;
     align-items: center;
-    background: #dcdcdc25;
+    background: transparent;
     border-radius: 25px;
     border: 1px solid #3f3f3f65;
     height: 3em;

@@ -1,28 +1,29 @@
 @import url(/css/general/style.css) all;
 
 .intro{
-    margin: 4em 21em;
+    margin: 5em 0 0 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 1em;
 }
-.intro h1{
-    font-weight: 500;
-    font-size: 200%;
+.intro img{
+   width: 10em;
 }
 .intro p{
     font-size: 90%;
 }
 
 form{
-    margin: 5em 21em;
+    margin: 2em 25em;
     display: flex;
     align-items: center;
-    background: #dcdcdc25;
+    background: transparent;
     border-radius: 25px;
-    box-shadow: 0 4px 10px #3f3f3f65;
     border: .2px solid #3f3f3f65;
-    height: 3em;
+    height: 2.5em;
+    transition: .5s ease;
 }
 form input{
     width: 96%;
@@ -35,7 +36,7 @@ form input{
     display: flex;
 }
 form:hover{
-    box-shadow: 0 4px 10px #cdcdcd;
+    box-shadow: 0 2px 5px #cdcdcd;
 }
 
 form button{
@@ -75,7 +76,7 @@ form button{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: #fff;
     position: fixed;
     width: 100%;
@@ -84,7 +85,7 @@ form button{
 }
 
 .loading-logo img {
-    width: 13em;
+    width: 5em;
     animation: pulse 1.5s infinite; /* Ensure the image also pulses */
 }
 

@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     sortedResults.forEach(article => {
                         const articleDiv = document.createElement('div');
                         articleDiv.classList.add('article');
+                        articleDiv.setAttribute('data-aos', 'fade-right');
+                        articleDiv.setAttribute('data-aos-duration', '2000');
 
                         const titleElement = document.createElement('a');
                         titleElement.href = `topic.html?title=${encodeURIComponent(article.topic)}&date=${encodeURIComponent(article.date)}&note=${encodeURIComponent(article.full_note)}&author=${encodeURIComponent(article.author)}`;

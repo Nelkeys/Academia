@@ -32,7 +32,6 @@ a:hover {
 
 html,
 body {
-    height: 100%;
     scroll-behavior: smooth;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;

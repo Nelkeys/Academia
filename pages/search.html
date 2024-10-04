@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="../assets/p-logo.png" type="image/x-icon">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Search Results</title>
     <link rel="stylesheet" href="../css/searchResult.css">
 </head>
@@ -17,7 +19,7 @@
         </div>
 
         <form id="search-form" action="../pages/search.html">
-            <input type="text" name="query" id="search-input" class="search-input" placeholder="Embedded system">
+            <input type="text" name="query" id="search-input" class="search-input" placeholder="search..">
             <button type="submit"><i class='bx bx-search'></i></button>
         </form>
     </header>
@@ -26,6 +28,12 @@
         <p>Loading...</p>
     </div>
     
+
+    <script>
+        AOS.init({
+            once: true
+        });
+      </script>
     <script src="../js/search.js"></script>
 </body>
 </html>
