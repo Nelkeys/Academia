@@ -143,17 +143,13 @@ header, .intro, form, .freq {
 
 
 @media (max-width: 550px ) {
-    header{
-        padding: .8em 1.5em;
-    }   
     .intro{
         margin: 1em 0 0 0;
         padding: 2em;
         gap: .5em;
-        text-align: center;
     }
-    .intro h1{
-        font-size: 120%;
+    .intro IMG{
+        width: 7em;
     }
     .intro p{
         font-size: 80%;
