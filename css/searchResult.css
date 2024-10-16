@@ -119,6 +119,9 @@ form button{
 
 
 @media (max-width: 550px ) {
+    body{
+        font-size: 85%;
+    }
     .logo img{
         width: 10em;
     }
