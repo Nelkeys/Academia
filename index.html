@@ -9,11 +9,9 @@
     <title>ACADEMIA</title>
 </head>
 <body>
-
     <div class="intro">
-        <img src="assets/p-logo.png" alt="">
+        <img src="assets/ls-logo.png" alt="">
     </div>
-
 
     <form id="search-form" action="pages/search.html">
         <input type="text" name="query" id="search-input" class="search-input" placeholder="search.." required>
@@ -21,27 +19,26 @@
     </form>
 
     <div class="freq">
-        <p class="top">Frequent searches</p>
-
         <div class="items">
-            <a href="">machine learning</a>
-            <a href="">programming</a>
-            <a href="">embedded systems</a>
-            <a href="">AI</a>
-            <a href="">processor</a>
-            <a href="">syntax</a>
+            <a href="/pages/search.html?query=machine+learning">machine learning</a>
+            <a href="/pages/search.html?query=programming">programming</a>
+            <a href="/pages/search.html?query=embedded+systems">embedded systems</a>
+            <a href="/pages/search.html?query=AI">AI</a>
+            <a href="/pages/search.html?query=processor">processor</a>
+            <a href="/pages/search.html?query=syntax">syntax</a>
         </div>
     </div>
 
+  
 
+    <!-- Add a container for the search results -->
+    <div id="results-container"></div>
 
-
-
-    <div class="loading-logo">
-        <img src="assets/p-logo.png" alt="">
-    </div>
+    <!-- Load Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"></script>
     
-    <script src="js/loader.js"></script>
-    <script src="js/search.js"></script>
+ 
+    <script src="js/s.js" type="module"></script>
 </body>
 </html>

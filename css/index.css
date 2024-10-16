@@ -1,28 +1,29 @@
 @import url(/css/general/style.css) all;
 
+
 .intro{
-    margin: 5em 0 0 0;
-    display: flex;
+    margin: 7em 0 0 0;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 1em;
 }
 .intro img{
-   width: 10em;
+   width: 12em;
 }
 .intro p{
     font-size: 90%;
 }
 
 form{
-    margin: 2em 25em;
-    display: flex;
+    display: flex !important;
+    margin: 2em 23em;
     align-items: center;
     background: transparent;
     border-radius: 25px;
-    border: .2px solid #3f3f3f65;
-    height: 2.5em;
+    border: 3px solid #3aa535;
+    height: 2.8em;
     transition: .5s ease;
 }
 form input{
@@ -56,7 +57,7 @@ form button{
     width: auto;
     height: auto;
     font-size: 150%;
-    font-weight: 700;
+    font-weight: 500;
     color: #179411;
 }
 
@@ -71,38 +72,6 @@ form button{
 
 
 
-
-.loading-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: #fff;
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-    animation: pulse 1.5s infinite; /* Apply the pulse animation */
-}
-
-.loading-logo img {
-    width: 5em;
-    animation: pulse 1.5s infinite; /* Ensure the image also pulses */
-}
-
-/* Keyframes for the pulsing effect */
-@keyframes pulse {
-    0% {
-        transform: scale(1); /* Original size */
-    }
-    50% {
-        transform: scale(1.1); /* Slightly larger */
-    }
-    100% {
-        transform: scale(1); /* Back to original size */
-    }
-}
-
-
 header, .intro, form, .freq {
     display: none; /* Hide content initially */
 }
@@ -110,30 +79,25 @@ header, .intro, form, .freq {
 
 
 .freq{
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;     
-    gap: 1em;
     font-family: "Ubuntu", sans-serif;
-}
-.freq .top{
-    font-weight: 400;
-    font-size: 110%;
 }
 .freq .items{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 3em;
-    width: 30%;
+    gap: 1em;
+    width: 100%;
     text-align: center;
     font-size: 75%;
 }
 .freq .items a{
-    color: #2f70cbd9;
+    color: #47ad41;
     font-weight: 400;
-    text-decoration: none;
+    text-decoration: underline;
     padding: 0;
 }
 
@@ -144,12 +108,12 @@ header, .intro, form, .freq {
 
 @media (max-width: 550px ) {
     .intro{
-        margin: 1em 0 0 0;
+        margin: 2em 0 0 0;
         padding: 2em;
         gap: .5em;
     }
-    .intro IMG{
-        width: 7em;
+    .intro img{
+        width: 10em;
     }
     .intro p{
         font-size: 80%;
@@ -165,15 +129,15 @@ header, .intro, form, .freq {
 
 
     .freq{
-        align-items: flex-start;
-        padding: 2em;
-        margin-top: 2em;
+        width: 100%;
+        padding: 1.5em;
     }
     .freq .items{
         align-items: flex-start;
         flex-direction: column;
-        gap: 1em;
-        width: 90%;
-        text-align: justify;
+        width: 100%;
+        margin-top: 1em;
+        font-size: 80%;
     }
+    
 }

@@ -11,7 +11,7 @@ header{
 }
 
 .article{
-    margin: 5em 25em 4em 15em;
+    margin: 3em 25em 4em 15em;
     padding: 0 0 2em 0;
 }
 
@@ -65,10 +65,34 @@ h3{
     margin-top: 10em;
 }
 #topic-author{
-    font-size: 90%;
+    font-size: 100%;
+    font-weight: 500;
     margin-top: 1em;
 }
 
+
+
+
+
+h1, h2, h3 {
+    color: #333;
+    margin-top: 2em;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 20px 0;
+    padding: 0;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
 
 
 
@@ -120,10 +144,12 @@ form button{
 
 
 @media (max-width: 550px ) {
+    .logo img{
+        width: 10em;
+    }
     header{
-        flex-direction: column;
         gap: 1em;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
         padding: 2em 1.5em !important;
 
@@ -131,9 +157,10 @@ form button{
     form{
         width: 100%;
         margin: 0;
+        height: 2.5em;
     }
     form button{
-        width: 12%;
+        width: 30%;
     }
     #topic-title{
         width: 100%;

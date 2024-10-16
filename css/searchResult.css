@@ -119,16 +119,20 @@ form button{
 
 
 @media (max-width: 550px ) {
+    .logo img{
+        width: 10em;
+    }
     header{
-        flex-direction: column;
         gap: 1em;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
         padding: 2em 1.5em !important;
+
     }
     form{
         width: 100%;
         margin: 0;
+        height: 2.5em;
     }
     form button{
         width: 12%;

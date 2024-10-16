@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
     <title>Topic Details</title>
     <link rel="stylesheet" href="../css/topic.css">
 </head>
-
 <body>
     <header>
         <div class="logo" onclick="window.location.href ='/'">
@@ -30,21 +28,19 @@
                 <h2 id="topic-title" data-aos="fade-down" data-aos-duration="1500"></h2>
                 <p id="topic-date" data-aos="fade-left" data-aos-duration="2000"></p>
             </div>
-            
             <div id="topic-note" data-aos="fade-right" data-aos-duration="2000"></div>
         </div>
     </section>
 
     <div class="author-section">
-        <img src="" alt="" id="author_pic">
+        <img src="" alt="Author Image" id="author-pic">
         <p id="topic-author"></p>
     </div>
 
-    
     <script>
-         AOS.init({
+        AOS.init({
             once: true
-        }); 
+        });
 
         document.addEventListener('DOMContentLoaded', function () {
             const urlParams = new URLSearchParams(window.location.search);
@@ -52,15 +48,19 @@
             const date = urlParams.get('date');
             const note = urlParams.get('note');
             const author = urlParams.get('author');
+            const authorImage = urlParams.get('authorImage');
 
             document.getElementById('topic-title').textContent = title;
             document.getElementById('topic-date').textContent = date;
             document.getElementById('topic-note').innerHTML = note;
-
             document.getElementById('topic-author').textContent = author;
-        });
 
-       
+            if (authorImage) {
+                document.getElementById('author-pic').src = authorImage;
+            } else {
+                document.getElementById('author-pic').src = 'https://i.ibb.co/F6TwxnQ/Pngtree-men-s-default-avatar-5944574.png'; // Set a default image URL if no author image is provided
+            }
+        });
     </script>
 </body>
 </html>

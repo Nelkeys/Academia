@@ -1,4 +1,4 @@
-// Import Firebase modules
+
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js';
 import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js';
 
@@ -99,7 +99,5 @@ document.addEventListener('DOMContentLoaded', async function () {
             console.error('Error fetching data:', error);
             resultsContainer.innerHTML = '<p>An error occurred while fetching the data.</p>';
         }
-    } else {
-        resultsContainer.innerHTML = '<p>Please enter a search query.</p>';
     }
 });

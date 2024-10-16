@@ -1,3 +1,5 @@
+
+/*
 document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('load', function () {
         setTimeout(function () {
@@ -7,4 +9,4 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('form').style.display = 'flex';  
         }, 1000);
     });
-});
+}) */
