@@ -123,8 +123,8 @@ form button{
     .article-author{
         color:#b8b8b8;
     }
-    form input{
-        color: #b8b8b8;
+    form{
+        background: #efefef;
     }
 }
 
