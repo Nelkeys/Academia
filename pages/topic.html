@@ -9,6 +9,49 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Topic Details</title>
     <link rel="stylesheet" href="../css/topic.css">
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js';
+        import { getFirestore, doc, getDoc } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCt8ZEJDI7wfi0jvQDY4qMx49MMtE1in_E",
+            authDomain: "academia-56566.firebaseapp.com",
+            projectId: "academia-56566",
+            storageBucket: "academia-56566.appspot.com",
+            messagingSenderId: "578752731789",
+            appId: "1:578752731789:web:dbd67a93d25d095d5b60c4"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = urlParams.get('id');
+
+            if (articleId) {
+                const articleRef = doc(db, 'articles', articleId);
+                const articleSnap = await getDoc(articleRef);
+
+                if (articleSnap.exists()) {
+                    const article = articleSnap.data();
+
+                    document.getElementById('topic-title').textContent = article.topic;
+                    document.getElementById('topic-date').textContent = article.date;
+                    document.getElementById('topic-note').innerHTML = article.full_note;
+                    document.getElementById('topic-author').textContent = article.author;
+
+                    if (article.authorImage) {
+                        document.getElementById('author-pic').src = article.authorImage;
+                    } else {
+                        document.getElementById('author-pic').src = 'https://i.ibb.co/F6TwxnQ/Pngtree-men-s-default-avatar-5944574.png'; // Set a default image URL if no author image is provided
+                    }
+                } else {
+                    document.getElementById('topic-container').innerHTML = '<p>Article not found.</p>';
+                }
+            }
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -33,33 +76,13 @@
     </section>
 
     <div class="author-section">
-        <img src="" alt="Author Image" id="author-pic">
+        <img src="" alt="" id="author-pic">
         <p id="topic-author"></p>
     </div>
 
     <script>
         AOS.init({
             once: true
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const title = urlParams.get('title');
-            const date = urlParams.get('date');
-            const note = urlParams.get('note');
-            const author = urlParams.get('author');
-            const authorImage = urlParams.get('authorImage');
-
-            document.getElementById('topic-title').textContent = title;
-            document.getElementById('topic-date').textContent = date;
-            document.getElementById('topic-note').innerHTML = note;
-            document.getElementById('topic-author').textContent = author;
-
-            if (authorImage) {
-                document.getElementById('author-pic').src = authorImage;
-            } else {
-                document.getElementById('author-pic').src = 'https://i.ibb.co/F6TwxnQ/Pngtree-men-s-default-avatar-5944574.png'; // Set a default image URL if no author image is provided
-            }
         });
     </script>
 </body>

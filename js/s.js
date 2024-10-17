@@ -1,4 +1,3 @@
-
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js';
 import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js';
 
@@ -35,21 +34,21 @@ document.addEventListener('DOMContentLoaded', async function () {
         try {
             const articlesRef = collection(db, 'articles');
             const querySnapshot = await getDocs(articlesRef);
-            const data = querySnapshot.docs.map(doc => doc.data());
-            console.log('Data:', data); // Debugging: log the fetched data
+            const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            //console.log('Data:', data); // Debugging: log the fetched data
 
             const filteredResults = data.filter(article => {
                 const topic = article.topic ? article.topic.toLowerCase() : '';
                 const snippet = article.snippet ? article.snippet.toLowerCase() : '';
                 const author = article.author ? article.author.toLowerCase() : '';
 
-                console.log('Checking article:', article); // Debugging: log each article being checked
-                console.log('Topic:', topic, 'Snippet:', snippet, 'Author:', author); // Debugging: log topic, snippet, and author
+                //console.log('Checking article:', article); // Debugging: log each article being checked
+                //console.log('Topic:', topic, 'Snippet:', snippet, 'Author:', author); // Debugging: log topic, snippet, and author
 
                 return topic.includes(searchQuery) || snippet.includes(searchQuery) || author.includes(searchQuery);
             });
 
-            console.log('Filtered Results:', filteredResults); // Debugging: log the filtered results
+           // console.log('Filtered Results:', filteredResults); // Debugging: log the filtered results
 
             const sortedResults = filteredResults.sort((a, b) => {
                 const aTopic = a.topic ? a.topic.toLowerCase() : '';
@@ -64,7 +63,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 return 0;
             });
 
-            console.log('Sorted Results:', sortedResults); // Debugging: log the sorted results
+            //console.log('Sorted Results:', sortedResults); // Debugging: log the sorted results
 
             resultsContainer.innerHTML = '';
 
@@ -76,7 +75,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                     articleDiv.setAttribute('data-aos-duration', '2000');
 
                     const titleElement = document.createElement('a');
-                    titleElement.href = `topic.html?title=${encodeURIComponent(article.topic)}&date=${encodeURIComponent(article.date)}&note=${encodeURIComponent(article.full_note)}&author=${encodeURIComponent(article.author)}&authorImage=${encodeURIComponent(article.authorImage)}`;
+                    titleElement.href = `topic.html?id=${encodeURIComponent(article.id)}`;
                     titleElement.innerHTML = `<h2 id="title">${article.topic}</h2>`;
 
                     const snippetElement = document.createElement('p');
