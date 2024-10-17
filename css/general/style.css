@@ -45,6 +45,16 @@ body{
     background: url('/assets/wallpaperflare.com_wallpaper.jpg') top/cover no-repeat;
     background: #ffffff;
 }
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #05161A;
+        color: #c6c5c5;
+        /* Add other dark mode styles here */
+    }
+    
+}
+
+
 ::selection {
     background: rgba(94, 94, 94, 0.363);
     /* Change the selection background color */

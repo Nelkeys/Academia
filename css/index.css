@@ -35,9 +35,7 @@ form input{
     font-family: 'poppins', sans-serif;
     display: flex;
 }
-form:hover{
-    box-shadow: 0 2px 5px #cdcdcd;
-}
+
 
 form button{
     width: 10%;
@@ -101,10 +99,11 @@ header, .intro, form, .freq {
 }
 
 
-
-
-
-
+@media (prefers-color-scheme: dark){
+    form{
+        background: #fefefe;
+    }
+}
 @media (max-width: 550px ) {
     .intro{
         margin: 2em 0 0 0;

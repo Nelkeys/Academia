@@ -26,6 +26,7 @@ form{
     border: 1px solid #3f3f3f65;
     height: 3em;
     width: 40%;
+    transition: .5s ease;
 }
 form input{
     width: 90%;
@@ -111,11 +112,21 @@ form button{
 }
 
 
-
-
-
-
-
+@media (prefers-color-scheme: dark) {
+    .date{
+        color: #3e3e3ecc;
+        font-size: 95%;
+    }
+    .article-snippet{
+        color: #e3e3e3cc;
+    }
+    .article-author{
+        color:#b8b8b8;
+    }
+    form input{
+        color: #b8b8b8;
+    }
+}
 
 
 @media (max-width: 550px ) {
