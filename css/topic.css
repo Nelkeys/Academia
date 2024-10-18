@@ -152,7 +152,10 @@ form button{
     }
     
     form{
-        background: #efefef;
+        background: transparent;
+    }
+    form input{
+        color: #eee;
     }
 }
 @media (max-width: 550px ) {

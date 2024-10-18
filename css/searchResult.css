@@ -124,7 +124,10 @@ form button{
         color:#b8b8b8;
     }
     form{
-        background: #efefef;
+        background: transparent;
+    }
+    form input{
+        color: #eee;
     }
 }
 
@@ -149,7 +152,7 @@ form button{
         height: 2.5em;
     }
     form button{
-        width: 12%;
+        width: 30%;
     }
     #results-container{
         margin: 0;
