@@ -1,6 +1,8 @@
 @import url(/css/general/style.css) all;
 
-.intro{
+
+
+.intro {
     margin: 7em 0 0 0;
     display: flex !important;
     align-items: center;
@@ -8,14 +10,16 @@
     flex-direction: column;
     gap: 1em;
 }
-.intro img{
-   width: 12em;
+
+.intro img {
+    width: 12em;
 }
-.intro p{
+
+.intro p {
     font-size: 90%;
 }
 
-form{
+form {
     display: flex !important;
     margin: 2em 23em;
     align-items: center;
@@ -25,7 +29,8 @@ form{
     height: 2.8em;
     transition: .5s ease;
 }
-form input{
+
+form input {
     width: 96%;
     height: 100%;
     padding: 1em 0 1em 2em;
@@ -37,7 +42,7 @@ form input{
 }
 
 
-form button{
+form button {
     width: 10%;
     height: 100%;
     cursor: pointer;
@@ -49,7 +54,8 @@ form button{
     justify-content: center;
     text-align: center;
 }
-.bx-search{
+
+.bx-search {
     border: none;
     width: auto;
     height: auto;
@@ -69,19 +75,24 @@ form button{
 
 
 
-header, .intro, form, .freq {
-    display: none; /* Hide content initially */
+header,
+.intro,
+form,
+.freq {
+    display: none;
+    /* Hide content initially */
 }
 
 
 
-.freq{
+.freq {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "Ubuntu", sans-serif;
 }
-.freq .items{
+
+.freq .items {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +102,8 @@ header, .intro, form, .freq {
     text-align: center;
     font-size: 75%;
 }
-.freq .items a{
+
+.freq .items a {
     color: #47ad41;
     font-weight: 400;
     text-decoration: underline;
@@ -99,43 +111,48 @@ header, .intro, form, .freq {
 }
 
 
-@media (prefers-color-scheme: dark){
-    form{
+@media (prefers-color-scheme: dark) {
+    form {
         background: #fefefe;
     }
 }
-@media (max-width: 550px ) {
-    .intro{
+
+@media (max-width: 550px) {
+    .intro {
         margin: 2em 0 0 0;
         padding: 2em;
         gap: .5em;
     }
-    .intro img{
+
+    .intro img {
         width: 10em;
     }
-    .intro p{
+
+    .intro p {
         font-size: 80%;
     }
 
-    form{
+    form {
         margin: 0 1em;
         height: 2.5em;
     }
-    form button{
+
+    form button {
         width: 15%;
     }
 
 
-    .freq{
+    .freq {
         width: 100%;
         padding: 1.5em;
     }
-    .freq .items{
+
+    .freq .items {
         align-items: flex-start;
         flex-direction: column;
         width: 100%;
         margin-top: 1em;
         font-size: 80%;
     }
-    
+
 }
