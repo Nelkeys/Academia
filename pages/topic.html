@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../assets/p-logo.png" type="image/x-icon">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Topic Details</title>
+    <title></title>
     <link rel="stylesheet" href="../css/topic.css">
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js';
@@ -41,6 +41,9 @@
                     document.getElementById('topic-note').innerHTML = article.full_note;
                     document.getElementById('topic-author').textContent = article.author;
 
+                    // Set the document title to "topic - Academia"
+                    document.title = `${article.topic} - Academia`;
+
                     if (article.authorImage) {
                         document.getElementById('author-pic').src = article.authorImage;
                     } else {
@@ -68,10 +71,10 @@
     <section class="article">
         <div id="topic-container">
             <div class="title-date">
-                <h2 id="topic-title" data-aos="fade-down" data-aos-duration="1500"></h2>
-                <p id="topic-date" data-aos="fade-left" data-aos-duration="2000"></p>
+                <h2 id="topic-title" data-aos="fade-down" data-aos-duration="1000"></h2>
+                <p id="topic-date" data-aos="fade-left" data-aos-duration="1500"></p>
             </div>
-            <div id="topic-note" data-aos="fade-right" data-aos-duration="2000"></div>
+            <div id="topic-note" data-aos="fade-right" data-aos-duration="1500"></div>
         </div>
     </section>
 
